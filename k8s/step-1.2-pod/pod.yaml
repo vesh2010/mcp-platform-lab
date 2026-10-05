@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mcp-server
+  labels:
+    app: mcp-server
+spec:
+  containers:
+    - name: mcp-server
+      image: mcp-platform:0.1.0
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080
